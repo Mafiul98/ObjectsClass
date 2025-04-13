@@ -6,18 +6,21 @@ public class Employee {
    private String position;
    private float salary;
 
+   public Employee(String empName,String empPosition,float empSalary){
+       this.name=empName;
+       this.position=empPosition;
+       this.salary=empSalary;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+   }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
+   public Employee(String empName,String empPosition,float empSalary,float ebsent){
+       this.name=empName;
+       this.position=empPosition;
+       this.salary=empSalary - (ebsent*500);
 
-    public void setSalary(float salary) {
-        this.salary = salary;
-    }
+   }
+
+
 
     public String getName() {
         return name;

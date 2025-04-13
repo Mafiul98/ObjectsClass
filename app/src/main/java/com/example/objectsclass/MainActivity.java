@@ -20,23 +20,18 @@ public class MainActivity extends AppCompatActivity {
         tvdisplay=findViewById(R.id.tvdisplay);
         tvdisplay.setText("");
 
-        Employee employee = new Employee();
-        employee.setName("Mafiul alam");
-        employee.setPosition("Android Developer");
-        employee.setSalary(10000);
-
-        Employee employee1 = new Employee();
-        employee1.setName("Jhon");
-        employee1.setPosition("Web Developer");
-        employee1.setSalary(10000);
-
-        tvdisplay.append(employee.getName());
-        tvdisplay.append("\n"+employee.getPosition());
-        tvdisplay.append("\n"+employee.getSalary()+"USD");
-
-        tvdisplay.append("\n\n"+employee1.getName());
+        Employee employee1 = new Employee("Mafiul Alam","App Developer",10000);
+        tvdisplay.append(employee1.getName());
         tvdisplay.append("\n"+employee1.getPosition());
-        tvdisplay.append("\n"+employee1.getSalary()+"USD");
+        tvdisplay.append("\n"+employee1.getSalary());
+
+
+        Employee employee2 = new Employee("John","Web Developer",10000,5);
+        tvdisplay.append("\n\n"+employee2.getName());
+        tvdisplay.append("\n"+employee2.getPosition());
+        tvdisplay.append("\n"+employee2.getSalary());
+
+
 
     }
 }
