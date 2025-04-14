@@ -1,22 +1,18 @@
 package com.example.objectsclass;
 
-public class Employee {
+public abstract class Employee {
 
   private String name;
    private String position;
    private float salary;
 
+   public abstract float calculateTex();
+   public abstract float calculateFinalSalary();
+
    public Employee(String empName,String empPosition,float empSalary){
        this.name=empName;
        this.position=empPosition;
        this.salary=empSalary;
-
-   }
-
-   public Employee(String empName,String empPosition,float empSalary,float ebsent){
-       this.name=empName;
-       this.position=empPosition;
-       this.salary=empSalary - (ebsent*500);
 
    }
 

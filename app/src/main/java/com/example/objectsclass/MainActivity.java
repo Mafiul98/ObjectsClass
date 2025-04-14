@@ -20,16 +20,18 @@ public class MainActivity extends AppCompatActivity {
         tvdisplay=findViewById(R.id.tvdisplay);
         tvdisplay.setText("");
 
-        Employee employee1 = new Employee("Mafiul Alam","App Developer",10000);
-        tvdisplay.append(employee1.getName());
-        tvdisplay.append("\n"+employee1.getPosition());
-        tvdisplay.append("\n"+employee1.getSalary());
 
+        Employee FulltimeEmployee = new FulltimeEmployee("Mafiul","App Devolper",10000);
+        tvdisplay.append("Name: "+FulltimeEmployee.getName());
+        tvdisplay.append("\nMainSalary: "+FulltimeEmployee.getSalary());
+        tvdisplay.append("\nTax: "+FulltimeEmployee.calculateTex());
+        tvdisplay.append("\nFinalSalary: "+FulltimeEmployee.calculateFinalSalary());
 
-        Employee employee2 = new Employee("John","Web Developer",10000,5);
-        tvdisplay.append("\n\n"+employee2.getName());
-        tvdisplay.append("\n"+employee2.getPosition());
-        tvdisplay.append("\n"+employee2.getSalary());
+        Employee ParttimeEmployee = new ParttimeEmployee("John","Web Devolper",10000);
+        tvdisplay.append("\n\nName: "+ParttimeEmployee.getName());
+        tvdisplay.append("\nMainSalary: "+ParttimeEmployee.getSalary());
+        tvdisplay.append("\nTax: "+ParttimeEmployee.calculateTex());
+        tvdisplay.append("\nFinalSalary: "+ParttimeEmployee.calculateFinalSalary());
 
 
 
