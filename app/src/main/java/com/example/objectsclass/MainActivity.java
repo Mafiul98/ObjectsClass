@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tvdisplay=findViewById(R.id.tvdisplay);
         tvdisplay.setText("");
-
+/*
 
         Employee FulltimeEmployee = new FulltimeEmployee("Mafiul","App Devolper",10000);
         tvdisplay.append("Name: "+FulltimeEmployee.getName());
@@ -33,6 +33,42 @@ public class MainActivity extends AppCompatActivity {
         tvdisplay.append("\nTax: "+ParttimeEmployee.calculateTex());
         tvdisplay.append("\nFinalSalary: "+ParttimeEmployee.calculateFinalSalary());
 
+ */
+
+        Employee employee2  = new Employee("Mafi","Developer",10000) {
+            @Override
+            public float calculateTex() {
+                return getSalary()*5/100;
+            }
+
+            @Override
+            public float calculateFinalSalary() {
+                return getSalary()-calculateTex();
+            }
+        };
+
+        tvdisplay.append("\nName: "+employee2.getName());
+        tvdisplay.append("\nMainSalary: "+employee2.getSalary());
+        tvdisplay.append("\nTax: "+employee2.calculateTex());
+        tvdisplay.append("\nFinalSalary: "+employee2.calculateFinalSalary());
+
+
+        Employee employee1 = new Employee("Bill gates","CEO",20000) {
+            @Override
+            public float calculateTex() {
+                return getSalary()*10/100;
+            }
+
+            @Override
+            public float calculateFinalSalary() {
+                return getSalary()-calculateTex();
+            }
+        };
+
+        tvdisplay.append("\n\nName: "+employee1.getName());
+        tvdisplay.append("\nMainSalary: "+employee1.getSalary());
+        tvdisplay.append("\nTax: "+employee1.calculateTex());
+        tvdisplay.append("\nFinalSalary: "+employee1.calculateFinalSalary());
 
 
     }
